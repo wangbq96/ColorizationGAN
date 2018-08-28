@@ -2,7 +2,7 @@
 
 This is codes for *Image Colorization Based on Conditional Wasserstein Generative Adversarial Networks*
 
-Please read the following blog for details
+Please read the following blog for details https://yahaha312.github.io/ColorizationGAN/
 
 ## Requirement:
 * Python 3.6.2
