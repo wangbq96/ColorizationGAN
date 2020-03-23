@@ -1,0 +1,4 @@
+Django2.0.4
+numpy1.14.2
+Pillow5.1.0
+scipy1.0.1

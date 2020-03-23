@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1 style="text-align:center">Real vs. Fake</h1>
+    </div>
+
+    <div class="row">
+        <form action="/submit_user/" method="post">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="alert alert-info" role="alert">
+                    <p>
+                        本问卷的目的是对<a href="https://github.com/yahaha312/ColorizationGAN">ColorizationGAN</a>生成的图片质量进行评价。
+                    </p>
+                    <p>
+                        问卷遵循<a href="https://arxiv.org/abs/1611.07004">
+Image-to-Image Translation with Conditional Adversarial Networks</a>中的评价方法，即测试者需要从2张图片中选出自己认为更加合理的一张，测试者有1秒的时间观察图片，随后图片消失，答题时间不限。
+                    </p>
+                </div>
+                <div class="input-group center-block">
+                    <input type="text" class="form-control" name="name" placeholder="你的名字是？（不想告诉我也可以不填）"
+                           aria-describedby="basic-addon1">
+                    <span id="helpBlock" class="help-block">&nbsp</span>
+                </div>
+                {% csrf_token %}
+            </div>
+            <div class="col-md-6 col-md-offset-3">
+                <button type="submit" class="btn btn-success btn-lg btn-block">开始</button>
+            </div>
+        </form>
+        <br>
+    </div>
+
+
+    <br>
+
+</div>
+<footer class="footer navbar-fixed-bottom">
+    <div class="container">
+        <p class="text-muted" style="text-align: center">Powered by wangboquan</p>
+    </div>
+</footer>
+
+<script src="/static/js/O3kg08vf.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

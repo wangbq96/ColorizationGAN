@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+
+# pycharm
+.idea/
+
+# Django
+questionnaire/migrations/*.py
+!questionnaire/migrations/__init__.py
+
+static/img/test/*
+
+db.sqlite3
+
+extra/test/*
+
+# macOS
+*/.DS_Store

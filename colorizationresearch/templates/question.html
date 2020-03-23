@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1 style="text-align:center">第{{ q_idx }}题：选项中哪一个图片的上色更为合理</h1>
+        <br>
+        <img src="/static/img/test/{{ gray_img }}" id="gray_img" class="img-responsive center-block" alt="Responsive image">
+        <br>
+        <button type="button" id="display_img_btn" class="btn btn-info center-block" onclick="displayImg()">点击此按钮后 选项中图片会出现1s 随后消失</button>
+    </div>
+    <br>
+
+    <form action="/question/{{ user }}/{{ q_idx }}/" method="post">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-2">
+                <div class="radio center-block" style="width: 300px;">
+                    <label>
+                        <input type="radio" name="answer" id="optionsRadios1" value="{{ img1 }}" required>
+                        <img src="/static/img/test/{{ img1 }}" id="img1" class="img-responsive" alt="Responsive image"
+                             style="visibility: visible" height="256" width="256">
+                    </label>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="radio center-block" style="width: 300px;">
+                    <label>
+                        <input type="radio" name="answer" id="optionsRadios2" value="{{ img2 }}" required>
+                        <img src="/static/img/test/{{ img2 }}" id="img2" class="img-responsive" alt="Responsive image"
+                             style="visibility: visible">
+                    </label>
+                </div>
+            </div>
+        </div>
+        <br>
+        <input type="hidden" name="img1" value="{{ img1 }}">
+        <input type="hidden" name="img2" value="{{ img2 }}">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success btn-lg btn-block">下一题</button>
+    </form>
+</div>
+<script src="/static/js/question.js"></script>
+<script src="/static/js/O3kg08vf.js"></script>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
